@@ -5,7 +5,8 @@ diff --git a/esm/index.js b/esm/index.js
 @@ -338,5 +338,22 @@ const Switch = ({ children, location }) => {
    const router = useRouter();
    const [originalLocation] = useLocationFromRouter(router);
- 
+-
++
 +  // Collect all route paths to window object
 +  if (typeof window !== 'undefined') {
 +    if (!window.__WOUTER_ROUTES__) {
@@ -25,5 +26,3 @@ diff --git a/esm/index.js b/esm/index.js
 +
    for (const element of flattenChildren(children)) {
      let match = 0;
-
-
